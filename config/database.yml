@@ -1,0 +1,14 @@
+# 
+default: &default
+  adapter: sqlite3
+  # 5 sec
+  timeout: 5000
+
+development:
+  # import from the above default
+  <<: *default
+  database: db/todos-dev.sqlite3
+
+  production:
+    <<: *default
+    database: db/todos-prod.sqlite3
