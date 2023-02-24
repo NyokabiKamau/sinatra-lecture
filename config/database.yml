@@ -1,4 +1,3 @@
-# 
 default: &default
   adapter: sqlite3
   # 5 sec
@@ -9,6 +8,6 @@ development:
   <<: *default
   database: db/todos-dev.sqlite3
 
-  production:
-    <<: *default
-    database: db/todos-prod.sqlite3
+production:
+  <<: *default
+  database: db/todos-prod.sqlite3
